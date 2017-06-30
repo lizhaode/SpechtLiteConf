@@ -1,0 +1,11 @@
+port: 1079
+adapter:
+  - id: ss
+    type: ss
+    host: 
+    port: 
+    method: chacha20
+    password: 
+rule:
+  - type: all
+    adapter: ss
