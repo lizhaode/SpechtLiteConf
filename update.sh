@@ -6,9 +6,10 @@ echo "执行更新 gfwlist py脚本"
 source ~/.bash_profile
 cd ~/Documents/SpechtLiteConf
 
-python spechtlite_conf.py
+python newRules.py
 echo "拷贝文件"
-cp ./conf/gfwlist /Users/lizhao/.SpechtLite
-cp ./conf/rejectlist /Users/lizhao/.SpechtLite
+cp ./conf/domainProxy.txt /Users/lizhao/.SpechtLite
+cp ./conf/ipProxy.txt /Users/lizhao/.SpechtLite
+cp ./conf/ipReject.txt /Users/lizhao/.SpechtLite
 
 echo "完成"

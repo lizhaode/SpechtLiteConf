@@ -5,22 +5,22 @@ port: 1079
 adapter:
      # id is used to distinguish adapter when defining rules.
      # There is a 'direct' adapter that connect directly to target host without proxy.
-  - id: http
-     # HTTP server is a http proxy server.
-    type: HTTP
-    host: 127.0.0.1
-    port: 1079
-    auth: false
-    username: proxy_username
-    password: proxy_password
-  - id: https
-     # SHTTP server is a http proxy server on SSL.
-    type: SHTTP
-    host: 127.0.0.1
-    port: 1079
-    auth: false
-    username: proxy_username
-    password: proxy_password
+  # - id: http
+  #    # HTTP server is a http proxy server.
+  #   type: HTTP
+  #   host: 127.0.0.1
+  #   port: 1079
+  #   auth: false
+  #   username: proxy_username
+  #   password: proxy_password
+  # - id: https
+  #    # SHTTP server is a http proxy server on SSL.
+  #   type: SHTTP
+  #   host: 127.0.0.1
+  #   port: 1079
+  #   auth: false
+  #   username: proxy_username
+  #   password: proxy_password
   - id: ss
     type: ss
     host: 
@@ -43,18 +43,16 @@ adapter:
 # Here defines how things should work.
 # Rule will be matched one by one.
 rule:
+  - type: iplist
+    file: ~/.SpechtLite/ipReject.txt
+    adapter: reject
   - type: list
-  # Forward requests based on whether the host domain matches the given regular expressions.
-    file: ~/.SpechtLite/gfwlist
+  # Forward requests based on the IP address of the host.
+    file: ~/.SpechtLite/domainProxy.txt
     adapter: ss
   - type: iplist
-  # Forward requests based on the IP address of the host.
-    file: ~/.SpechtLite/proxyiprange
+    file: ~/.SpechtLite/ipProxy.txt
     adapter: ss
-  - type: list
-  # Reject requests based on whether the host domain matches the given regular expressions.
-    file: ~/.SpechtLite/rejectlist
-    adapter: reject
   # - type: country
   # # When the location is unknown. Usually this means this is resolved an Intranet IP.
   #   country: CN

@@ -50,9 +50,17 @@ def get_gfw_list():
                 domain = re.findall(domain_pattern, line)
                 if domain:
                     if line.startswith('||') or line.startswith('|'):
-                        gfwlist_path.write(surge_to_specht('DOMAIN-SUFFIX', domain[0]))
+                        # gfwlist_path.write(surge_to_specht('DOMAIN-SUFFIX', domain[0]))
+                        print('suffix规则开始')
+                        print(domain[0])
+                        print(surge_to_specht('DOMAIN-SUFFIX', domain[0]))
+                        print('suffix规则结束')
                     else:
-                        gfwlist_path.write(surge_to_specht('DOMAIN-KEYWORD', domain[0]))
+                        # gfwlist_path.write(surge_to_specht('DOMAIN-KEYWORD', domain[0]))
+                        print('keyword规则开始')
+                        print(domain[0])
+                        print(surge_to_specht('DOMAIN-KEYWORD', domain[0]))
+                        print('keyword规则结束')
     print('gfwlist done!')
 
 def get_reject_list():
@@ -71,4 +79,4 @@ def get_reject_list():
 if __name__ == '__main__':
     get_gfw_list()
     # get_white_list()
-    get_reject_list()
+    # get_reject_list()
