@@ -10,11 +10,20 @@ class newRules(object):
         originalText = requests.get(originalUrl).text
         return originalText
 
-    def getRejectRules(self,originalRules):
+    def getdomainRejectRules(self,originalRules):
         originalRules = io.StringIO(originalRules)
         rejectList = []
         for i in originalRules.readlines():
             if i.startswith('DOMAIN-SUFFIX') and i.endswith('Reject\n'):
+                rejectList.append('(^|.)' + i.split(',')[1] + '$\n')
+
+        return rejectList
+
+    def getdomainSuffixRejectRules(self, originalRules):
+        originalRules = io.StringIO(originalRules)
+        rejectList = []
+        for i in originalRules.readlines():
+            if i.startswith('DOMAIN') and i.endswith('Reject\n'):
                 rejectList.append('^' + i.split(',')[1] + '$\n')
 
         return rejectList
@@ -32,12 +41,12 @@ class newRules(object):
         tmp = io.StringIO(originalRules)
         proxyList = []
         for i in tmp.readlines():
-            if i.startswith('DOMAIN-SUFFIX') and i.endswith('Proxy\n'):
+            if i.startswith('DOMAIN-SUFFIX') and i.endswith('PROXY\n'):
                 proxyList.append(i.split(',')[1] + '$\n')
 
         tmp = io.StringIO(originalRules)
         for i in tmp.readlines():
-            if i.startswith('DOMAIN-KEYWORD') and i.endswith('Proxy\n'):
+            if i.startswith('DOMAIN-KEYWORD') and i.endswith('PROXY\n'):
                 proxyList.append(i.split(',')[1] + '\n')
 
         return proxyList
@@ -55,10 +64,12 @@ class newRules(object):
 if __name__ == '__main__':
     oriRules = newRules().getRulesIo('https://raw.githubusercontent.com/h2y/Shadowrocket-ADBlock-Rules/master/sr_top500_whitelist_ad.conf')
 
-    # reject = newRules().getRejectRules(oriRules)
-    # completeRejectRules = newRules().addRegex(reject)
-    # with open('conf/domainReject.txt','w') as f:
-    #     f.writelines(completeRejectRules)
+    reject1 = newRules().getdomainRejectRules(oriRules)
+    reject2 = newRules().getdomainSuffixRejectRules(oriRules)
+    reject = reject1 + reject2
+    completeRejectRules = newRules().addRegex(reject)
+    with open('conf/domainReject.txt','w') as f:
+        f.writelines(completeRejectRules)
 
     completeIpRejectRules = newRules().getIpRejectRules(oriRules)
     with open('conf/ipReject.txt','w') as f:

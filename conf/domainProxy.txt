@@ -283,6 +283,6 @@ instagram
 wikipedia
 telegram
 github
+maven
 jetbrains
 visualstudio
-maven
