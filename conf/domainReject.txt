@@ -28,7 +28,6 @@
 (^|\.)coremetrics\.com$
 (^|\.)irs01\.com$
 (^|\.)madmini\.com$
-(^|\.)mmstat\.com$
 (^|\.)optimizelyapis\.com$
 (^|\.)sitemeter\.com$
 (^|\.)wrating\.com$
@@ -2423,6 +2422,7 @@
 (^|\.)zzbaowen\.com$
 (^|\.)zzimg\.51\.la$
 (^|\.)zzrcz\.com$
+(^|\.)monityapp.com$
 ^eclick\.baidu\.com$
 ^entry\.baidu\.com$
 ^hmma\.baidu\.com$
@@ -2453,7 +2453,6 @@
 ^coremetrics\.com$
 ^irs01\.com$
 ^madmini\.com$
-^mmstat\.com$
 ^optimizelyapis\.com$
 ^sitemeter\.com$
 ^wrating\.com$
