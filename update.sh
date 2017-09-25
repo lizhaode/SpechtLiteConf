@@ -1,6 +1,7 @@
 # 更新配置文件
 echo "更新规则"
-python3 getRules.py
+add=$(which python3)
+${add} getRules.py
 
 sleep 10
 

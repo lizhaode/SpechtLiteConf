@@ -4,9 +4,8 @@ import io
 
 class newRules(object):
     def getRulesIo(self,originalUrl):
-        # 获取白名单，用 io 库读取成文件类型数据，便于处理
         # originalUrl = 'https://raw.githubusercontent.com/h2y/Shadowrocket-ADBlock-Rules/master/sr_top500_whitelist_ad.conf'
-        # originalUrl = 'http://67.218.153.234:8080/file/myconf.conf'
+        # originalUrl = 'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/banAD.acl'
         originalText = requests.get(originalUrl).text
         return originalText
 
@@ -60,24 +59,49 @@ class newRules(object):
 
         return regexList
 
+    def getUseText(self, oriText):
+        startIndex = oriText.index('# 广告关键词')
+        endIndex = oriText.index('# 直连列表')
+        return oriText[startIndex:endIndex]
+
+    def getDomainFromRegex(self, oriText):
+        tmp = io.StringIO(oriText)
+        domainList = []
+        for i in tmp:
+            if i.startswith('('):
+                domainList.append(i.replace('\r\n','\n'))
+
+        return domainList
+
+    def getIPFromRegex(self, oriText):
+        tmp = io.StringIO(oriText)
+        ipList = []
+        for i in tmp:
+            if '/' in i:
+                ipList.append(i.replace('\r\n','\n'))
+
+        return ipList
 
 if __name__ == '__main__':
-    oriRules = newRules().getRulesIo('https://raw.githubusercontent.com/h2y/Shadowrocket-ADBlock-Rules/master/sr_top500_whitelist_ad.conf')
+    
+    oriRules = newRules().getRulesIo('https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/banAD.acl')
+    useText = newRules().getUseText(oriRules)
+    # 获取 domainReject 的内容
+    domainReject = newRules().getDomainFromRegex(useText)
+    with open('domainReject.txt','w') as f:
+        f.writelines(domainReject)
+    # 获取 ipReject 的内容
+    ipReject = newRules().getIPFromRegex(useText)
+    with open('ipReject.txt','w') as f:
+        f.writelines(ipReject)
 
-    reject1 = newRules().getdomainRejectRules(oriRules)
-    reject2 = newRules().getdomainSuffixRejectRules(oriRules)
-    reject = reject1 + reject2
-    completeRejectRules = newRules().addRegex(reject)
-    with open('conf/domainReject.txt','w') as f:
-        f.writelines(completeRejectRules)
+    # completeIpRejectRules = newRules().getIpRejectRules(oriRules)
+    # with open('conf/ipReject.txt','w') as f:
+    #     f.writelines(completeIpRejectRules)
 
-    completeIpRejectRules = newRules().getIpRejectRules(oriRules)
-    with open('conf/ipReject.txt','w') as f:
-        f.writelines(completeIpRejectRules)
+    # oriRules = newRules().getRulesIo('http://67.218.153.234:8080/file/myconf.conf')
 
-    oriRules = newRules().getRulesIo('http://67.218.153.234:8080/file/myconf.conf')
-
-    proxy = newRules().getProxyRules(oriRules)
-    completeProxyRules = newRules().addRegex(proxy)
-    with open('conf/domainProxy.txt','w') as f:
-        f.writelines(completeProxyRules)
+    # proxy = newRules().getProxyRules(oriRules)
+    # completeProxyRules = newRules().addRegex(proxy)
+    # with open('conf/domainProxy.txt','w') as f:
+    #     f.writelines(completeProxyRules)
