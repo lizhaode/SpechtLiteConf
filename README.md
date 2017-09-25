@@ -2,7 +2,16 @@
 
 这个项目是学习了 [geekpi/SpechtLiteConf](https://github.com/geekpi/SpechtLiteConf)  方法，感谢原作者！
 
-## 最新更新
+本人自己使用 ShadowSocks-libev ，通过SpechtLite转发来实现自动分流和屏蔽广告的效果
 
-目前脚本已经不维护了，如果有更新，直接更新conf文件夹中的相应配置文件
-由于目前感觉需要翻墙的配置已经完全够用，所以如果更新脚本，也只是更新一下相应的屏广告的内容，近期会抽出时间来更新一下
+## 首次使用
+
+- 从Github上下载运行SpechtLite
+- 通过Homebrew安装ShadowSocks-libev和simple-obfs
+- 根据实际情况修改local.json(ss运行的配置文件)和plist
+- 执行runFirst.sh脚本
+
+这样每次开机都会自动运行ss-libev，并且通过SpechtLite实现分流和屏蔽广告的效果
+
+## 说明
+目前暂时只通过更新conf文件夹中的配置文件来更新配置。等待找到更好的广告屏蔽源，抽时间修改自动化的脚本，实现定时更新

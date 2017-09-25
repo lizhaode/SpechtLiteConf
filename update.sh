@@ -1,15 +1,13 @@
-#! /bin/sh
-#  执行更新gfwlist 脚本，然后拷贝更新的文件到 SpechtLite
-echo "执行更新 gfwlist py脚本"
+# 更新配置文件
+echo "更新规则"
+python3 getRules.py
 
-# 脚本执行环境设置
-source ~/.bash_profile
-cd ~/Documents/SpechtLiteConf
+sleep 10
 
-python newRules.py
 echo "拷贝文件"
-cp ./conf/domainProxy.txt /Users/lizhao/.SpechtLite
-cp ./conf/ipProxy.txt /Users/lizhao/.SpechtLite
-cp ./conf/ipReject.txt /Users/lizhao/.SpechtLite
+cp ./conf/domainProxy.txt ~/.SpechtLite/
+cp ./conf/domainReject.txt ~/.SpechtLite/
+cp ./conf/ipProxy.txt ~/.SpechtLite/
+cp ./conf/ipReject.txt ~/.SpechtLite/
 
 echo "完成"

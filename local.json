@@ -1,0 +1,11 @@
+{
+    "server": "",
+    "server_port": "",
+    "local_port": "13588",
+    "password": "",
+    "method": "aes-256-gcm",
+    "timeout": "300",
+    "fast_open": true,
+    "plugin": "obfs-local",
+    "plugin_opts": "obfs=tls;obfs-http=https://www.dropbox.com"
+}
