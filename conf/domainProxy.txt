@@ -273,8 +273,9 @@ t66y\.com$
 sexinsex\.net$
 brazzers\.com$
 appsto\.re$
-bandwagonhost.com$
-bit.ly$
+bandwagonhost\.com$
+bit\.ly$
+gradle\.org$
 google
 dropbox
 youtube
