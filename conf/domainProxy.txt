@@ -276,6 +276,7 @@ appsto\.re$
 bandwagonhost\.com$
 bit\.ly$
 gradle\.org$
+pornhub\.com$
 google
 dropbox
 youtube
