@@ -277,6 +277,7 @@ bandwagonhost\.com$
 bit\.ly$
 gradle\.org$
 pornhub\.com$
+conoha\.jp$
 google
 dropbox
 youtube
