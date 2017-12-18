@@ -43,11 +43,11 @@ adapter:
 # Here defines how things should work.
 # Rule will be matched one by one.
 rule:
-  - type: iplist
-    file: ~/.SpechtLite/ipReject.txt
-    adapter: reject
   - type: list
     file: ~/.SpechtLite/domainReject.txt
+    adapter: reject
+  - type: iplist
+    file: ~/.SpechtLite/ipReject.txt
     adapter: reject
   - type: list
   # Forward requests based on the IP address of the host.
