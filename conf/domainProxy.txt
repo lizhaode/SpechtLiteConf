@@ -93,8 +93,6 @@ gunsamerica\.com$
 gravatar\.com$
 getlantern\.org$
 getfoxyproxy\.org$
-go\.com$
-go\.jp$
 gfw\.press$
 howtoforge\.com$
 hootsuite\.com$
