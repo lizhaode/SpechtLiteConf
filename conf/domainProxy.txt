@@ -276,6 +276,7 @@ bit\.ly$
 gradle\.org$
 pornhub\.com$
 conoha\.jp$
+stackoverflow\.com$
 google
 dropbox
 youtube
