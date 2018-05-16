@@ -2663,7 +2663,6 @@
 (^|\.)sohu\.wrating\.com$
 (^|\.)song\.fanxing\.kugou\.com$
 (^|\.)sousuo\.xm\.sjzhushou\.com$
-(^|\.)sp0\.baidu\.com$
 (^|\.)sp3\.cndm\.com$
 (^|\.)spclient\.wg\.spotify\.com$
 (^|\.)spcode\.baidu\.com$
