@@ -277,6 +277,7 @@ gradle\.org$
 pornhub\.com$
 conoha\.jp$
 stackoverflow\.com$
+advai\.net$
 google
 dropbox
 youtube
