@@ -1,0 +1,35 @@
+{
+  "log": {
+    "access": "/tmp/v2ray_access.log",
+    "error": "/tmp/v2ray_error.log",
+    "loglevel": "debug"
+  },
+  "inbound": {
+    "port": 7421,
+    "listen": "127.0.0.1",
+    "protocol": "socks",
+    "settings": {
+      "auth": "noauth",
+      "udp": true,
+      "ip": "127.0.0.1"
+    }
+  },
+  "outbound": {
+    "protocol": "vmess",
+    "settings": {
+      "vnext": [
+        {
+          "address": "",
+          "port": ,
+          "users": [
+            {
+              "id": "",
+              "alterId": 512
+            }
+          ]
+        }
+      ]
+    },
+    "mux": {"enabled": true}
+  }
+}
