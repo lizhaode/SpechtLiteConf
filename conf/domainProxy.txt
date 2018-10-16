@@ -277,7 +277,6 @@ gradle\.org$
 pornhub\.com$
 conoha\.jp$
 stackoverflow\.com$
-advai\.net$
 kreditpintar\.net$
 pstmn\.io$
 google
