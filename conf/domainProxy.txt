@@ -279,6 +279,7 @@ conoha\.jp$
 stackoverflow\.com$
 kreditpintar\.net$
 pstmn\.io$
+s3\.amazonaws\.com$
 google
 dropbox
 youtube
