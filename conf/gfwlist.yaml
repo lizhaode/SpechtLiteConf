@@ -1,41 +1,10 @@
-# This is the local http proxy server port.
-# Note there is another SOCKS5 proxy server starts at port+1 automatically.
 port: 1079
 # Adapter is the remote proxy server you want to connect to
 adapter:
-     # id is used to distinguish adapter when defining rules.
-     # There is a 'direct' adapter that connect directly to target host without proxy.
-  # - id: http
-  #    # HTTP server is a http proxy server.
-  #   type: HTTP
-  #   host: 127.0.0.1
-  #   port: 1079
-  #   auth: false
-  #   username: proxy_username
-  #   password: proxy_password
-  # - id: https
-  #    # SHTTP server is a http proxy server on SSL.
-  #   type: SHTTP
-  #   host: 127.0.0.1
-  #   port: 1079
-  #   auth: false
-  #   username: proxy_username
-  #   password: proxy_password
   - id: ss
-    type: ss
+    type: socks5
     host: 
-    port: 
-    # Currently support: AES-128-CFB, AES-192-CFB, AES-256-CFB, chacha20, salsa20, rc4-md5
-    # Shadowsocks encryption methods are not fully tested, please report if there is anything not working.
-    method: chacha20
-    password: 
-  # - id: adapter4
-  #   type: socks5
-  #   host: socks5.server
-  #   port: 3128
-  # Speed adapter automatically connects to all specified adapters (with given delay) 
-  # and uses the fastest one that becomes ready.
-  # Disconnect after given delay without connecting to remote.
+    port:  
   - id: reject
     type: reject
     # It's very important to set a delay since some apps may try to reconnect repeatedly.
@@ -56,19 +25,6 @@ rule:
   - type: iplist
     file: ~/.SpechtLite/ipProxy.txt
     adapter: ss
-  # - type: country
-  # # When the location is unknown. Usually this means this is resolved an Intranet IP.
-  #   country: CN
-  #   match: true
-  #   adapter: direct
-  # - type: country
-  # # When the location is unknown. Usually this means this is resolved an Intranet IP.
-  #   country: --
-  #   match: true
-  #   adapter: ss
-  # - type: DNSFail
-  # # When the DNS lookup of the host fails.
-  #   adapter: ss
   - type: all
   # Match all other requests.
     adapter: direct
