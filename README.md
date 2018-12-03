@@ -4,6 +4,12 @@
 
 本人自己使用 ShadowSocks-libev ，通过SpechtLite转发来实现自动分流和屏蔽广告的效果
 
+`使用中发现规则文件太多，会稍微影响网络性能，所以去掉了屏蔽广告，也大幅度减少了代理规则`
+
+`并且也从 ShadowSocks-libev 切换到 V2ray 所以以下内容大部分作废了`
+
+***
+
 ## 首次使用
 
 - 从Github上下载运行SpechtLite
