@@ -13,12 +13,6 @@ adapter:
 # Rule will be matched one by one.
 rule:
   - type: list
-    file: ~/.SpechtLite/domainReject.txt
-    adapter: reject
-  - type: iplist
-    file: ~/.SpechtLite/ipReject.txt
-    adapter: reject
-  - type: list
   # Forward requests based on the IP address of the host.
     file: ~/.SpechtLite/domainProxy.txt
     adapter: ss
