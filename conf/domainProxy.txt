@@ -41,6 +41,10 @@ stackoverflow\.com$
 kreditpintar\.net$
 pstmn\.io$
 amazonaws\.com$
+amazon\.com$
+ytimg\.com$
+ggpht\.com$
+fbcdn\.net$
 google
 dropbox
 youtube
