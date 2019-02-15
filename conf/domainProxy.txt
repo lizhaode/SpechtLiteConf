@@ -45,6 +45,7 @@ amazon\.com$
 ytimg\.com$
 ggpht\.com$
 fbcdn\.net$
+sourceforge\.net$
 google
 dropbox
 youtube
