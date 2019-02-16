@@ -46,6 +46,7 @@ ytimg\.com$
 ggpht\.com$
 fbcdn\.net$
 sourceforge\.net$
+bintray\.com$
 google
 dropbox
 youtube
