@@ -48,6 +48,8 @@ fbcdn\.net$
 sourceforge\.net$
 bintray\.com$
 quora\.com$
+quoracdn\.net$
+t\.co$
 google
 dropbox
 youtube
