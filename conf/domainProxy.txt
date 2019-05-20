@@ -47,6 +47,7 @@ ggpht\.com$
 fbcdn\.net$
 sourceforge\.net$
 bintray\.com$
+quora\.com$
 google
 dropbox
 youtube
