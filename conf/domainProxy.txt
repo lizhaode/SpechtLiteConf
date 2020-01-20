@@ -50,6 +50,9 @@ bintray\.com$
 quora\.com$
 quoracdn\.net$
 t\.co$
+jetbrains\.com$
+pornhubpremium\.com$
+gstatic\.com$
 google
 dropbox
 youtube
@@ -61,7 +64,6 @@ wikipedia
 telegram
 github
 maven
-jetbrains
 visualstudio
 v2ex
 mega
