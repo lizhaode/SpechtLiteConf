@@ -17,7 +17,6 @@ imgur\.com$
 medium\.com$
 netflix\.com$
 skype\.com$
-shadowsocks\.org$
 twtkr\.com$
 twimg\.com$
 twitthat\.com$
@@ -35,7 +34,6 @@ appsto\.re$
 bandwagonhost\.com$
 bit\.ly$
 gradle\.org$
-pornhub\.com$
 conoha\.jp$
 stackoverflow\.com$
 kreditpintar\.net$
@@ -51,8 +49,8 @@ quora\.com$
 quoracdn\.net$
 t\.co$
 jetbrains\.com$
-pornhubpremium\.com$
 gstatic\.com$
+pornhub
 google
 dropbox
 youtube

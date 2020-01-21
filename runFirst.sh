@@ -2,8 +2,8 @@
 
 mkdir -p ~/.SpechtLite
 
-cp ./com.lizhao.ss.plist ~/Library/LaunchAgents/
-launchctl load ~/Library/LaunchAgents/com.lizhao.ss.plist
+cp ./com.lizhao.v2ray.plist ~/Library/LaunchAgents/
+launchctl load ~/Library/LaunchAgents/com.lizhao.v2ray.plist
 
 echo "拷贝配置文件"
 cp -R ./conf/* ~/.SpechtLite/
