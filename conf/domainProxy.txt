@@ -50,6 +50,7 @@ quoracdn\.net$
 t\.co$
 jetbrains\.com$
 gstatic\.com$
+reddit\.com$
 pornhub
 google
 dropbox
