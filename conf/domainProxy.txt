@@ -51,6 +51,11 @@ t\.co$
 jetbrains\.com$
 gstatic\.com$
 reddit\.com$
+epio\.app$
+redtubepremium\.com$
+phprcdn\.com$
+contentdef\.com$
+portalcdn\.com$
 pornhub
 google
 dropbox
