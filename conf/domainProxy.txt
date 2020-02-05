@@ -50,7 +50,6 @@ quoracdn\.net$
 t\.co$
 jetbrains\.com$
 gstatic\.com$
-reddit\.com$
 epio\.app$
 redtubepremium\.com$
 phprcdn\.com$
@@ -72,3 +71,4 @@ visualstudio
 v2ex
 mega
 slack
+reddit
