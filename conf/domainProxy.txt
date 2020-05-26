@@ -55,6 +55,9 @@ redtubepremium\.com$
 phprcdn\.com$
 contentdef\.com$
 portalcdn\.com$
+sstatic\.net$
+gravatar\.com$
+quantcount\.com$
 pornhub
 google
 dropbox
