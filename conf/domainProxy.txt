@@ -57,6 +57,7 @@ v2ray\.com$
 vimeo\.com$
 vimeocdn\.com$
 ytimg\.com$
+digicert\.com$
 dropbox
 facebook
 github
