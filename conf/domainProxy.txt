@@ -58,6 +58,10 @@ vimeo\.com$
 vimeocdn\.com$
 ytimg\.com$
 digicert\.com$
+whoer\.net$
+appcues\.com$
+fullstory\.com$
+newrelic\.com$
 dropbox
 facebook
 github
@@ -75,3 +79,4 @@ visualstudio
 wikipedia
 yahoo
 youtube
+pluralsight
