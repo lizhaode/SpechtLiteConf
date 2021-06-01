@@ -62,6 +62,7 @@ whoer\.net$
 appcues\.com$
 fullstory\.com$
 newrelic\.com$
+ghcr\.io$
 dropbox
 facebook
 github
